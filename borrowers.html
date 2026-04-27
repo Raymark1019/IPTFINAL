@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Library Management System</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7e7d0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #caa88d;
+      padding: 20px 30px;
+      width: 100%;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .home-button {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+    }
+
+    .home-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .title {
+      font-size: 30px;
+      font-weight: bold;
+      color: #4b2e27;
+      text-align: center;
+      user-select: none;
+    }
+
+    form, .thank-you {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #cba98e;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #4b2e27;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #3e2a20;
+    }
+
+    input[type="text"], input[type="date"], input[type="tel"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border: 1px solid #999;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background-color: #5a372c;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #442819;
+    }
+
+    .thank-you {
+      display: none;
+      color: #3e2a20;
+      font-size: 1em;
+    }
+
+    .thank-you h3 {
+      color: #5a372c;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .info {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="menu.html" class="home-button">
+      <img src="home.png" alt="Home" />
+    </a>
+    <div class="title">LIBRARY MANAGEMENT SYSTEM</div>
+  </header>
+
+  <form id="signupForm">
+    <h2>Borrower Sign-Up Form</h2>
+
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required />
+
+    <label for="borrowerId">Borrower ID:</label>
+    <input type="text" id="borrowerId" name="borrowerId" required />
+
+    <label for="membershipDate">Membership Date:</label>
+    <input type="date" id="membershipDate" name="membershipDate" required />
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <input type="submit" value="Register" />
+  </form>
+
+  <div class="thank-you" id="thankYouMessage" aria-live="polite">
+    <h3>Thank you, You've been registered!</h3>
+    <div class="info"><strong>Full Name:</strong> <span id="displayName"></span></div>
+    <div class="info"><strong>Borrower ID:</strong> <span id="displayId"></span></div>
+    <div class="info"><strong>Membership Date:</strong> <span id="displayDate"></span></div>
+    <div class="info"><strong>Phone Number:</strong> <span id="displayPhone"></span></div>
+  </div>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('fullName').value;
+      const id = document.getElementById('borrowerId').value;
+      const date = document.getElementById('membershipDate').value;
+      const phone = document.getElementById('phone').value;
+
+      const formattedDate = new Date(date).toLocaleDateString();
+
+      document.getElementById('displayName').textContent = name;
+      document.getElementById('displayId').textContent = id;
+      document.getElementById('displayDate').textContent = formattedDate;
+      document.getElementById('displayPhone').textContent = phone;
+
+      document.getElementById('signupForm').style.display = 'none';
+      document.getElementById('thankYouMessage').style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Management System</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7e7d0;
+    }
+
+
+    header {
+      background-color: #caa88d;
+      padding: 30px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      color: #4b2e27;
+    }
+
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+
+    .author-section {
+      display: flex;
+      background-color: #fff7ee;
+      border: 3px solid #c4a78a;
+      border-radius: 30px;
+      width: 70%;
+      max-width: 1000px;
+      margin: 40px 0;
+      padding: 30px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      min-height: 400px;
+      gap: 40px; /* Balanced spacing */
+    }
+
+
+    .author-section.reverse {
+      flex-direction: row-reverse;
+    }
+
+
+    .author-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 40px;
+      padding-left: 40px;
+
+
+    }
+
+
+    .author-image img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 4px solid #c4a78a;
+      object-fit: cover;
+    }
+
+
+    .author-info {
+      flex: 2;
+      color: #4b2e27;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: justify;
+      padding-left: 80px;
+      justify-content: flex-start;
+      padding-top: 30px;
+    }
+
+
+    .author-info h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+
+    .author-info p {
+      font-size: 18px;
+      line-height: 1.5;
+      padding-right: 30px;
+    }
+
+
+    @media screen and (max-width: 900px) {
+      .author-section,
+      .author-section.reverse {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+
+      .author-info {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <a href="menu.html" style="position: absolute; left: 20px; top: 25px;">
+    <img src="home.png" alt="Home" width="30" height="30">
+  </a>
+  LIBRARY MANAGEMENT SYSTEM
+</header>
+ 
+  <div class="container">
+    <!-- Template 1 -->
+    <div class="author-section">
+      <div class="author-image">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1061157246.jpg?crop=1xw:1.0xh;center,top&resize=640:*" alt="Author 1">
+      </div>
+      <div class="author-info">
+        <h2>J.K. Rowling</h2>
+        <p><b>Nationality:</b> British</p>
+        <p><strong>Birthdate:</strong> July 31, 1965</p>
+        <p><b>Overview: </b> for writing the Harry Potter series, J.K. Rowling became one of the world's best-selling authors. The series has been translated into over 80 languages and adapted into films.</p>
+      </div>
+    </div>
+
+
+    <!-- Template 2 -->
+    <div class="author-section reverse">
+      <div class="author-image">
+        <img src="https://files.bestbooks.to/416b9624-c575-4e39-9144-c0f7c6f11f65.png" alt="Author 2">
+      </div>
+      <div class="author-info">
+        <h2>J.R.R. Tolkien</h2>
+        <p><b>Nationality:</b> British (English)</p>
+        <p><strong>Birthdate:</strong> January 3, 1892 – September 2, 1973</p>
+        <p><b>Overview: </b> Famous for The Lord of the Rings and The Hobbit, Tolkien is considered the father of modern fantasy literature and was a professor at Oxford University.</p>
+      </div>
+    </div>
+
+
+    <!-- Template 3 -->
+    <div class="author-section">
+      <div class="author-image">
+        <img src="https://assets.lls.fr/pages/48884239/FRA.2de.Ch18.TEX.Photographie_Saint-Exupery-retouche.webp" alt="Author 3">
+      </div>
+      <div class="author-info">
+        <h2>Antoine de Saint-Exupéry</h2>
+        <p><b>Nationality:</b> French</p>
+        <p><strong>Birthdate:</strong> June 29, 1900 – July 31, 1944</p>
+        <p><b>Overview: </b>Best known for The Little Prince, Saint-Exupéry was also an aviator whose experiences inspired much of his writing, blending adventure, philosophy, and poetic storytelling.</p>
+      </div>
+    </div>
+
+
+    <!-- Template 4 -->
+    <div class="author-section reverse">
+      <div class="author-image">
+        <img src="https://mysticbooks.org/image/author/george-orwell.webp" alt="Author 4">
+      </div>
+      <div class="author-info">
+        <h2>George Orwell</h2>
+        <p><b>Nationality:</b> British</p>
+        <p><strong>Birthdate:</strong> June 25, 1903 – January 21, 1950</p>
+        <p><b>Overview: </b>Author of 1984 and Animal Farm, Orwell was known for his works criticizing totalitarianism, social injustice, and promoting freedom of thought.</p>
+      </div>
+    </div>
+
+
+    <!-- Template 5 -->
+    <div class="author-section">
+      <div class="author-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFottH9Y4vpQ1YfwtWbyqkQRX-4ISMhQw6xA&s" alt="Author 5">
+      </div>
+      <div class="author-info">
+        <h2>F. Scott Fitzgerald</h2>
+        <p><b>Nationality:</b> American</p>
+        <p><strong>Birthdate:</strong> September 24, 1896 – December 21, 1940</p>
+        <p><b>Overview: </b>amous for The Great Gatsby, Fitzgerald depicted the American Jazz Age, exploring themes of wealth, ambition, and disillusionment.</p>
+      </div>
+    </div>
+
+
+    <!-- Template 6 -->
+    <div class="author-section reverse">
+      <div class="author-image">
+        <img src="https://www.historyofcreativity.com/content/6/s_creator.001_1587252901.jpg" alt="Author 6">
+      </div>
+      <div class="author-info">
+        <h2>Harper Lee</h2>
+        <p><b>Nationality:</b> American</p>
+        <p><strong>Birthdate:</strong> April 28, 1926 – February 19, 2016</p>
+        <p><b>Overview: </b>Best known for To Kill a Mockingbird, a novel addressing racial injustice in the American South. It won the Pulitzer Prize for Fiction in 1961.</p>
+      </div>
+    </div>
+
+
+    <!-- Template 7 -->
+    <div class="author-section">
+      <div class="author-image">
+        <img src="https://www.onthisday.com/images/people/jane-austen.jpg?w=360" alt="Author 7">
+      </div>
+      <div class="author-info">
+        <h2>Jane Austen</h2>
+        <p><b>Nationality:</b> British (English)</p>
+        <p><strong>Birthdate:</strong> December 16, 1775 – July 18, 1817</p>
+        <p><b>Overview: </b>An iconic author of romantic fiction, her works like Pride and Prejudice and Sense and Sensibility explore social class, marriage, and morality in 19th-century England.</p>
+      </div>
+    </div>
+
+
+    <!-- Template 8 -->
+    <div class="author-section reverse">
+      <div class="author-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6oA9zJlBtjhakGL5zSRmFyOZf-JsMNiMQLA&s" alt="Author 8">
+      </div>
+      <div class="author-info">
+        <h2>Anne Frank</h2>
+        <p><b>Nationality:</b> German-Dutch</p>
+        <p><strong>Birthdate:</strong> June 12, 1929 – February/March 1945</p>
+        <p><b>Overview: </b>A Jewish teenager who wrote The Diary of a Young Girl while hiding from the Nazis. Her diary became one of the most powerful testimonies of the Holocaust.</p>
+      </div>
+    </div>
+
+
+    <!-- Template 9 -->
+    <div class="author-section">
+      <div class="author-image">
+        <img src="https://images3.penguinrandomhouse.com/author/5234" alt="Author 9">
+      </div>
+      <div class="author-info">
+        <h2>Paulo Coelho</h2>
+        <p><b>Nationality:</b> Brazilian</p>
+        <p><strong>Birthdate:</strong> August 24, 1947</p>
+        <p><b>Overview: </b>Best known for The Alchemist, Coelho's works explore spirituality, personal growth, and self-discovery, becoming one of the most translated living authors.</p>
+      </div>
+    </div>
+
+
+    <!-- Template 10 -->
+    <div class="author-section reverse">
+      <div class="author-image">
+        <img src="https://images4.penguinrandomhouse.com/author/3446" alt="Author 10">
+      </div>
+      <div class="author-info">
+        <h2>Dan Brown</h2>
+        <p><b>Nationality:</b> American</p>
+        <p><strong>Birthdate:</strong> June 22, 1964</p>
+        <p><b>Overview: </b>Known for thrillers like The Da Vinci Code, Brown's novels blend history, religion, and symbols into gripping mysteries.</p>
+      </div>
+    </div>
+
+
+    <!-- Template 11 -->
+    <div class="author-section">
+      <div class="author-image">
+        <img src="https://d2e85gken4dohw.cloudfront.net/wp-content/uploads/2021/04/08193428/Haig_Matt_3.jpg" alt="Author 11">
+      </div>
+      <div class="author-info">
+        <h2>Matt Haig</h2>
+        <p><b>Nationality:</b> British</p>
+        <p><strong>Birthdate:</strong> July 3, 1975</p>
+        <p><b>Overview: </b>Author of The Midnight Library and Reasons to Stay Alive, Haig writes about mental health, hope, and the complexities of life.</p>
+      </div>
+    </div>
+
+
+    <!-- Template 12 -->
+    <div class="author-section reverse">
+      <div class="author-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyxYEekenHMmM508EIRc1dLzalxRMOK38TXQ&s" alt="Author 12">
+      </div>
+      <div class="author-info">
+        <h2>Kazuo Ishiguro</h2>
+        <p><b>Nationality:</b> British (born in Japan)</p>
+        <p><strong>Birthdate:</strong> November 8, 1954</p>
+        <p><b>Overview: </b>Nobel Prize-winning author of Never Let Me Go and The Remains of the Day, Ishiguro explores memory, identity, and the past in his literary fiction.</p>
+      </div>
+    </div>
+
+
+    <!-- Template 13 -->
+    <div class="author-section">
+      <div class="author-image">
+        <img src="https://assets-us-01.kc-usercontent.com/5cb25086-82d2-4c89-94f0-8450813a0fd3/ebf689fa-b0d9-4f2d-9a08-3b71a597a4b3/Andy-Weir.jpg?fm=jpg&auto=format" alt="Author 13">
+      </div>
+      <div class="author-info">
+        <h2>Andy Weir</h2>
+        <p><b>Nationality:</b> American</p>
+        <p><strong>Birthdate:</strong> June 16, 1972</p>
+        <p><b>Overview: </b> Gained fame for The Martian, a science-fiction novel that combines science, survival, and humor. Weir has since written other acclaimed sci-fi novels like Project Hail Mary.</p>
+      </div>
+    </div>
+
+
+    <!-- Template 14 -->
+    <div class="author-section reverse">
+      <div class="author-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Dg498iG33lPkrGIl1Lfkk1CjR2XPkUMe2A&s" alt="Author 14">
+      </div>
+      <div class="author-info">
+        <h2>Silvia Moreno-Garcia</h2>
+        <p><b>Nationality:</b> Mexican-Canadian</p>
+        <p><strong>Birthdate:</strong> April 25, 1981</p>
+        <p><b>Overview: </b>Known for Mexican Gothic and Gods of Jade and Shadow, Silvia blends horror, fantasy, and Mexican folklore in her works.</p>
+      </div>
+    </div>
+
+
+    <!-- Template 15 -->
+    <div class="author-section">
+      <div class="author-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfb8nDroy8a5O3LQk8JxxoNZVI8-s5XEV7jA&s" alt="Author 15">
+      </div>
+      <div class="author-info">
+        <h2>Miranda Cowley Heller</h2>
+        <p><b>Nationality:</b> American</p>
+        <p><strong>Birthdate:</strong> Not publicly disclosed (estimated around 1960s)</p>
+        <p><b>Overview: </b> Former HBO executive turned novelist, known for her debut novel The Paper Palace, a New York Times bestseller exploring family, love, and betrayal.</p>
+      </div>
+    </div>
+
+
+
+
+  </div>
+</body>
+</html>
+
+
+

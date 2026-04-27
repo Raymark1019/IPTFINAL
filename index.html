@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library Management System - Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7e7d0;
+    }
+
+    header {
+      background-color: #caa88d;
+      padding: 20px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #4b2e27;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+    }
+
+    label {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #5b382c;
+    }
+
+    input[type="email"], input[type="password"] {
+      padding: 15px;
+      width: 300px;
+      border: 2px solid #caa88d;
+      border-radius: 40px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .login-button {
+      display: inline-block;
+      background-color: #caa88d;
+      color: #5b382c;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .login-button:hover {
+      background-color: #b39175;
+    }
+    .signup-link {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .signup-link a {
+      color: #5b382c;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    LIBRARY MANAGEMENT SYSTEM
+  </header>
+
+  <div class="container">
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email" />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your password" />
+
+    <a href="menu.html" class="login-button">LOG IN</a>
+
+    <div class="signup-link">
+      <a href="#">Sign up</a>
+    </div>
+  </div>
+</body>
+</html>
